@@ -1,10 +1,21 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav className="flex gap-4">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+    <header className="bg-slate-900 text-white p-4 flex justify-between items-center shadow-md">
+      <div className="text-xl font-bold">
+        <Link href="/">My Next.js App</Link>
+      </div>
+      <nav className="flex gap-6">
+        <Link href="/" className="hover:text-slate-300 transition-colors">
+          Home
+        </Link>
+        <Link href="/about" className="hover:text-slate-300 transition-colors">
+          About
+        </Link>
+        <Link href="/contact" className="hover:text-slate-300 transition-colors">
+          Contact
+        </Link>
       </nav>
     </header>
   );
